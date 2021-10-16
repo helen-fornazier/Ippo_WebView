@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "190996147559",
+    "project_id": "ippo-saude",
+    "storage_bucket": "ippo-saude.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:190996147559:android:d9b48e0c4a8435737993c2",
+        "android_client_info": {
+          "package_name": "br.com.ippo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "190996147559-gvpu70fi4s8kb4h7uekp6lvmu3l6hvf9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.com.ippo",
+            "certificate_hash": "13d6f6cdf0a7f32b22bdc21452590eed8cb1a17a"
+          }
+        },
+        {
+          "client_id": "190996147559-akms5gdtnikg1mu9k3japclgi3sb1ba4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCyiWe5xMXxrFqQOVj4M48laRu78lTdNpM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "190996147559-akms5gdtnikg1mu9k3japclgi3sb1ba4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
