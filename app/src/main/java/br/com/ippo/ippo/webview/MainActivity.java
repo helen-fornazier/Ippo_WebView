@@ -1,9 +1,12 @@
-package br.com.ippo.ippo.webview;
+package com.hotmail.davidjunio.ippo.ippo.webview;
 
 import static android.content.ContentValues.TAG;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -56,6 +59,17 @@ public class MainActivity extends AppCompatActivity {
             public void onPageFinished(WebView view, String url) {
                 findViewById(R.id.splash).setVisibility(View.GONE);
                 findViewById(R.id.webview).setVisibility(View.VISIBLE);
+            }
+
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                if (url != null && !url.contains("ippo.com.br") &&
+                        (url.startsWith("http://") || url.startsWith("https://") || url.startsWith("whatsapp://"))) {
+                    view.getContext().startActivity(
+                            new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+                    return true;
+                } else {
+                    return false;
+                }
             }
         });
 

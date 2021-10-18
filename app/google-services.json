@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:190996147559:android:d9b48e0c4a8435737993c2",
         "android_client_info": {
-          "package_name": "br.com.ippo"
+          "package_name": "com.hotmail.davidjunio.ippo"
         }
       },
       "oauth_client": [
@@ -17,7 +17,7 @@
           "client_id": "190996147559-gvpu70fi4s8kb4h7uekp6lvmu3l6hvf9.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "br.com.ippo",
+            "package_name": "com.hotmail.davidjunio.ippo",
             "certificate_hash": "13d6f6cdf0a7f32b22bdc21452590eed8cb1a17a"
           }
         },

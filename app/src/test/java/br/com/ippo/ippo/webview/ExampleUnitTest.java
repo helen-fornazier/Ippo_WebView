@@ -1,4 +1,4 @@
-package br.com.ippo.ippo.webview;
+package com.hotmail.davidjunio.ippo.ippo.webview;
 
 import org.junit.Test;
 

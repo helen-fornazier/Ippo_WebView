@@ -4,14 +4,22 @@ plugins {
 apply plugin: 'com.google.gms.google-services'
 
 android {
+    signingConfigs {
+        debug {
+            storeFile file('/home/koike/Downloads/android.keystore')
+            keyAlias 'androidkey'
+            storePassword '1ad06c11-9451-4c24-b563-f6abd8081fcd'
+            keyPassword '1ad06c11-9451-4c24-b563-f6abd8081fcd'
+        }
+    }
     compileSdk 31
 
     defaultConfig {
-        applicationId "br.com.ippo"
+        applicationId "com.hotmail.davidjunio.ippo"
         minSdk 21
         targetSdk 31
-        versionCode 1
-        versionName "1.0"
+        versionCode 5
+        versionName "1.161021"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

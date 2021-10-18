@@ -1,4 +1,4 @@
-package br.com.ippo.ippo.webview;
+package com.hotmail.davidjunio.ippo.ippo.webview;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("br.com.ippo.ippo.webview", appContext.getPackageName());
+        assertEquals("com.hotmail.davidjunio.ippo.ippo.webview", appContext.getPackageName());
     }
 }
