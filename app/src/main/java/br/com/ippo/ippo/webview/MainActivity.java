@@ -1,6 +1,7 @@
 package com.hotmail.davidjunio.ippo.ippo.webview;
 
 import static android.content.ContentValues.TAG;
+import static android.net.Uri.decode;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,6 +22,8 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.messaging.FirebaseMessaging;
+
+import java.net.URLDecoder;
 
 public class MainActivity extends AppCompatActivity {
     private WebView webView;
@@ -62,10 +65,24 @@ public class MainActivity extends AppCompatActivity {
             }
 
             public boolean shouldOverrideUrlLoading(WebView view, String url) {
-                if (url != null && !url.contains("ippo.com.br") &&
+                String ippo_share_prefix = "https://share.ippo.com.br/";
+
+                if (url != null && url.startsWith(ippo_share_prefix)) {
+                    String message = url.substring(ippo_share_prefix.length());
+                    message = decode( message );
+                    Intent sendIntent = new Intent();
+                    sendIntent.setAction(Intent.ACTION_SEND);
+                    sendIntent.putExtra(Intent.EXTRA_TEXT, message);
+                    sendIntent.setType("text/plain");
+
+                    Intent shareIntent = Intent.createChooser(sendIntent, null);
+                    //startActivity(shareIntent);
+                    view.getContext().startActivity(shareIntent);
+                    return true;
+                }
+                else if (url != null && !url.contains("ippo.com.br") &&
                         (url.startsWith("http://") || url.startsWith("https://") || url.startsWith("whatsapp://"))) {
-                    view.getContext().startActivity(
-                            new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+                    view.getContext().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
                     return true;
                 } else {
                     return false;
