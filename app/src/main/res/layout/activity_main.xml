@@ -8,11 +8,11 @@
 
     <ImageView
         android:id="@+id/splash"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:visibility="visible"
         android:layout_gravity="center"
-        android:src="@drawable/ippo_logo_splash" />
+        android:src="@mipmap/ippo_splash_foreground" />
 
     <WebView
         android:id="@+id/webview"
