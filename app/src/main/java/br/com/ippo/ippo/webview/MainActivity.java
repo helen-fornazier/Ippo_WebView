@@ -80,7 +80,8 @@ public class MainActivity extends AppCompatActivity {
                     view.getContext().startActivity(shareIntent);
                     return true;
                 }
-                else if (url != null && !url.contains("ippo.com.br") &&
+                // open external browser for the following
+                else if (url != null && !url.contains("ippo.com.br") && !url.contains("jotfor") &&
                         (url.startsWith("http://") || url.startsWith("https://") || url.startsWith("whatsapp://"))) {
                     view.getContext().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
                     return true;

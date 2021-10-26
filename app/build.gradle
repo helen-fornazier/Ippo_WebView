@@ -18,8 +18,8 @@ android {
         applicationId "com.hotmail.davidjunio.ippo"
         minSdk 21
         targetSdk 31
-        versionCode 9
-        versionName "1.191021"
+        versionCode 10
+        versionName "1.261021"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
