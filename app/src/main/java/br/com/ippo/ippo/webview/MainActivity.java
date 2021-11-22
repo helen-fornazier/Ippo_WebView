@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             webView.goBack();
         } else {
             //super.onBackPressed();
-            webView.loadUrl("https://ippo.com.br/iniciomobile");
+            webView.loadUrl("https://ippo.com.br/route");
         }
     }
     private void enableHTML5AppCache(WebSettings settings) {
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
         settings.setUseWideViewPort(true);
         //enableHTML5AppCache(settings);
-        webView.loadUrl("https://ippo.com.br/iniciomobile");
+        webView.loadUrl("https://ippo.com.br/route");
 
         webView.setWebViewClient(new WebViewClient() {
 
